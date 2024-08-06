@@ -74,7 +74,10 @@ librewolf_default() {
 
 # Enabling NetworkManger
 # Do this after packages are installed
-systemctl enable NetworkManger
+nm_enable() {
+    echo "Enabling NetworkManger st start-up"
+    systemctl enable NetworkManger
+}
 
 # Reminders for configurations
 echo "REMINDER: use nmtui to configure wifi"
