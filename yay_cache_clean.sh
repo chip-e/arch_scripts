@@ -1,12 +1,11 @@
 #!/usr/bin/bash
-set -euo pipfail
+set -euo pipefail
 
 # Check & display cache folder size
-echo "cache folder size: $(du -hs $HOME/.cache/yay/)"
-sleep 3
+echo "yay cache size: $(du -hs $HOME/.cache/yay/ | awk {'print $1'})"
 
 # clean package manager cache
 yay -Sc
 
 # Check & display cache after cleaning
-echo "cache folder size: $(du -hs $HOME/.cache/yay/)"
+echo "yay cache size: $(du -hs $HOME/.cache/yay/ | awk {'print $1'})"
