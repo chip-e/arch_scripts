@@ -1,4 +1,5 @@
 #/usr/bin/bash
+set -euo pipefail
 # Arch post-install configuration script
 
 # TODO:
