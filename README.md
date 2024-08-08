@@ -1,22 +1,13 @@
 # arch_scripts
-To set-up and configure Arch the way I like in post-install
+Collection of scripts I wrote and use for Linux. Most are Arch specifc.
 
-Start up NetworkManager by default when system boots
+arch_setup.sh: To set-up and configure Arch the way I like in post-install. (WIP)
 
-Perform package updates before installing packages I commonly use (WIP)
+makepkg_yay.sh: Builds yay (AUR helper) without root, executed in arch_setup.sh
 
-Download and install yay (AUR helper)
+yay_cache_clean.sh: Cleans AUR helper/package manager cache folder.
 
-Change default browser to Librewolf
-
-Create and enable swap file (for virtual memory & suspend + hibernation)
-
-clone and configure dot files for ricing
-
-configure vim
-
-start i3 automatically after login in tty
-
+shbreeder.sh Creates new .sh file with shebang and strict mode options.
 
 
 
