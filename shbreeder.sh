@@ -13,4 +13,6 @@ chmod u+x $script_name
 echo "#!/usr/bin/bash" >> $script_name
 echo "set -euo pipefail" >> $script_name
 
+# prints statement letting user know script's been created
+echo "$script_name created."
 
