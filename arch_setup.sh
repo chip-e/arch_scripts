@@ -11,6 +11,7 @@ set -euo pipefail
 # Allow user to input swap file size / match RAM size (read RAM)
 # Implement check for Librewolf existence in librewolf_default()
 
+
 # Check for root status, exits if not ran as root
 root_check(){
     if [ ! "$(id - u)" = 0]; then
@@ -58,6 +59,15 @@ yay_install(){
     # script if makepkg_yay.sh doesn't work
 }
 
+common_pkgs() {
+#check for pkg existence and install packages
+# brightnessctl alsa-utils alsa-plugins pipewire-pulse pavucontrol
+# udisks2 feh htop man-db thunar bash-completion
+# alacritty/kitty polybar
+# tmux mpv/vlc htop librewolf
+# lxappearance keepassxc
+}
+
 # Changes default web browser to Librewolf (xdg-utils)
 librewolf_default() {
     echo "Changing default web browser to Librewolf..."
@@ -66,21 +76,13 @@ librewolf_default() {
     echo "Done"
 }
 
-# Check for other pkgs and download if needed
-# brightnessctl alsa-utils alsa-plugins pipewire-pulse pavucontrol
-# udisks2 feh htop man-db thunar bash-completion
-# alacritty/kitty polybar
-# tmux mpv/vlc htop librewolf
-# lxappearance keepassxc
-
 # Enabling NetworkManger
-# Do this after packages are installed
 nm_enable() {
     echo "Enabling NetworkManger st start-up"
     systemctl enable NetworkManger
 }
 
-# Reminders for configurations
-echo "REMINDER: use nmtui to configure wifi"
+# Reminders for configurations (passwords and such)
+# echo "REMINDER: use nmtui to configure wifi"
 
 # exit 0
