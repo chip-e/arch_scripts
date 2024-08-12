@@ -10,7 +10,7 @@ echo "Kernel: $kernel"
 # distro
 # distro=$(head -n1 /etc/issue)
 # distro=$(cat /etc/*-release | grep "NAME" | awk {'print $2'})
-distro=$(cat /etc/*-release | grep "NAME" 
+distro=$(cat /etc/*-release | grep "NAME")
 echo "Distribution: $distro"
 # cpu info
 cpuname=$(lscpu | grep "Model name:")
