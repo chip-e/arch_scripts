@@ -1,9 +1,10 @@
 #!/usr/bin/bash
+# Disabled pipfail for this script. Caused terminal to crash post-run.
 #set -euo pipefail
+
 # A bash script for creating python virtual environment
 # TODO:
 # Check if user is sourcing the file
-# How to jump into and activate directory venv without crashing
 
 # Reminder for running with 'source'
 echo 'Run with "source" or "."'
@@ -15,6 +16,7 @@ projectdir=${1:-new_project}
 # Create project directory
 echo "Creating $projectdir..."
 mkdir $projectdir
+
 # Create virtual environment within project directory
 python -m venv $projectdir/env
 echo "$projectdir created."
@@ -24,12 +26,8 @@ echo "Jumping into $projectdir directory..."
 cd $projectdir/
 
 # Activate venv
- echo "Activating virtual environment..."
+echo "Activating virtual environment..."
 source env/bin/activate
-#venv_activate () {
-#  . /env/bin/activate
-#}
-#venv_activate
 echo "Activated."
 
 
